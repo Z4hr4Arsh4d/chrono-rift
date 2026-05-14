@@ -1,0 +1,12 @@
+# Extra apt packages required by Chrono Rift on top of the Dockerfile defaults.
+# (Already provided by the Dockerfile: build-essential, cmake, gdb,
+#  libsfml-dev, libsdl2-dev, libglfw3-dev, libncurses-dev — do NOT list those.)
+
+# DejaVu monospace font, loaded by the SFML renderer at startup
+# from /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf.
+# Without this package the in-game text would be invisible because
+# the base ubuntu:22.04 image ships without TTF fonts.
+fonts-dejavu-core
+
+# Liberation Mono — fallback font tried by the renderer if DejaVu fails.
+fonts-liberation
